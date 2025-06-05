@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clima.Application\Clima.Application.csproj" />
+    <ProjectReference Include="..\Clima.Service\Clima.Service.csproj" />
+    <ProjectReference Include="..\Clima.Domain\Clima.Domain.csproj" />
+    <ProjectReference Include="..\Clima.Infrastructure\Clima.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

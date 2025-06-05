@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clima.Domain\Clima.Domain.csproj" />
+    <ProjectReference Include="..\Clima.Infrastructure\Clima.Infrastructure.csproj" />
+    <ProjectReference Include="..\Clima.Service\Clima.Service.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

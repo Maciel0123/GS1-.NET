@@ -1,0 +1,44 @@
+@model List<Clima.Domain.Responses.EventoClimaticoResponse>
+
+@{
+    ViewData["Title"] = "Eventos Climáticos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Data/Hora</th>
+                <th>Localidade</th>
+                <th>Temperatura (°C)</th>
+                <th>Umidade (%)</th>
+                <th>Precipitação (mm)</th>
+                <th>Vento (km/h)</th>
+                <th>Condição</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var evento in Model)
+            {
+                <tr>
+                    <td>@evento.DataHora.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@evento.Localidade</td>
+                    <td>@evento.Temperatura</td>
+                    <td>@evento.Umidade</td>
+                    <td>@evento.Precipitacao</td>
+                    <td>@evento.VelocidadeVento</td>
+                    <td>@evento.Condicao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        Nenhum evento climático encontrado.
+    </div>
+}
