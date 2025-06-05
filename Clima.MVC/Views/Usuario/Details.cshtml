@@ -1,0 +1,17 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Clima.Domain.Entities.Usuario
+
+@{
+    ViewData["Title"] = "Detalhes do Usuário";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Nome:</strong> @Model.Nome</p>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+<a asp-action="Index">Voltar</a>

@@ -9,6 +9,7 @@ namespace Clima.Infrastructure.Persistence
 
         public DbSet<Dispositivo> Dispositivos { get; set; }
         public DbSet<DadoClimatico> DadosClimaticos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -54,6 +55,24 @@ namespace Clima.Infrastructure.Persistence
                       .HasForeignKey(e => e.DispositivoId)
                       .HasConstraintName("FK_DADOS_DISPOSITIVO")
                       .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Tabela: TB_USUARIO
+            modelBuilder.Entity<Usuario>(entity =>
+            {
+                entity.ToTable("TB_USUARIO");
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.Email)
+                      .HasColumnType("VARCHAR2(100)")
+                      .HasColumnName("EMAIL")
+                      .IsRequired();
+
+                entity.Property(e => e.Nome)
+                      .HasColumnType("VARCHAR2(100)")
+                      .HasColumnName("NOME")
+                      .IsRequired();
             });
         }
     }
