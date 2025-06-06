@@ -66,10 +66,9 @@ POST /api/dadosclimaticos → envia dados climáticos
 
 GET /evento/index → exibe eventos climáticos tratados via lógica
 
-📊 Diagrama de Entidades
+## 📊 Diagrama de Entidades
 
-
-Os arquivos .png ou .svg devem estar dentro da pasta /docs.
+![Diagrama ER](Entidades.png)
 
 ## 👨‍👩‍👧‍👦 Equipe
 Henrique Maciel (RM556480),
