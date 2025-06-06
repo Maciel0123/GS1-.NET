@@ -8,7 +8,8 @@ builder.Services.AddControllers();
 
 // Configuração do banco de dados (ajuste se for Oracle ou outro)
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Configurações do Swagger
 builder.Services.AddEndpointsApiExplorer();
