@@ -77,7 +77,9 @@ http://localhost:5012/usuario
 http://localhost:5012
 ```
 Funcionalidades:
+
 http://localhost:5012/usuario -> Mostra todas as opções de CRUD com interface grafica intuitiva
+
 http://localhost:5012 -> Mostra os dados climaticos e estado atual (Estavel, Aleta, Critico)
 
 ## 📊 Diagrama de Entidades
