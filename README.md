@@ -66,6 +66,20 @@ POST /api/dadosclimaticos → envia dados climáticos
 
 GET /evento/index → exibe eventos climáticos tratados via lógica
 
+## 🧪 Testes do projeto MVC
+Após executar o projeto MVC:
+
+📌 Acesse os endpoints para testes:
+```
+http://localhost:5012/usuario
+```
+```
+http://localhost:5012
+```
+Funcionalidades:
+http://localhost:5012/usuario -> Mostra todas as opções de CRUD com interface grafica intuitiva
+http://localhost:5012 -> Mostra os dados climaticos e estado atual (Estavel, Aleta, Critico)
+
 ## 📊 Diagrama de Entidades
 
 ![Diagrama ER](Entidades.png)
